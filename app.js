@@ -55,15 +55,21 @@ form.addEventListener('click', Submit);
       .then((data) => {
         console.log(data);
         const { temp_f, temp_c, condition, humidity } = data.current;
-        const { tz_id, region , country, localtime} = data.location;
+        const { tz_id, name , country, localtime} = data.location;
         const { text } = data.current.condition;
         //set DOM Elements from the API:
         temperatureDegree.textContent = Math.round(temp_f);
         temperatureDegreeC.textContent = Math.round(temp_c);
-        locationRegion.textContent = `${region}, ${country}`;
+        locationRegion.textContent = `${name}, ${country}`;
         currentHumidity.textContent = `${humidity}% humidity`;
         temperatureDescription.textContent = condition.text.toLowerCase();
         locationTimezone.textContent = tz_id;
+
+        const currentDate1 = new Date(localtime).toLocaleTimeString();
+        console.log(currentDate1);
+
+
+
         const currentDate = new Date(localtime).toLocaleTimeString(undefined, {
             day:    'numeric',
             month:  'numeric',
@@ -72,8 +78,10 @@ form.addEventListener('click', Submit);
             minute: '2-digit',
             second: '2-digit',
         });
+
+
         //found this formula to convert time here https://www.toptal.com/software/definitive-guide-to-datetime-manipulation#:~:text=Getting%20the%20Current%20Time%20Stamp&text=const%20currentDate%20%3D%20new%20Date()%3B%20const%20timestamp%20%3D%20currentDate.,IE8%2C%20you%20can%20use%20Date.
-        locationLocalTime.textContent = `Local Time: ${currentDate}`
+        locationLocalTime.textContent = `Local Time: ${currentDate1}`
         //Set icon
         setIcons(text);
       });
