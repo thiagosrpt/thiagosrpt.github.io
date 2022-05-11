@@ -12,13 +12,25 @@
     </head>
     <body>
 
+        <div id="container">
+            <form id="form" onSubmit="return false;">
+                <input id="country-input" class="autocomplete-input" type="text" placeholder="Search Location">
+                <button type="submit" value="Submit">Submit</button>
+            </form>
+                <ul class="autocomplete-list" id="country-list">
+                </ul>
+        </div>
+
+            <br>
+            <span>.....................</span>
+            <br>
+
         <div class="location">
             <h1 class="city-name">region-country</h1>
-            <canvas id="icon" width="128" height="128">icon</canvas>
+            <img src="http://cdn.weatherapi.com/weather/128x128/day/113.png" id="icon2" width="128" height="128"></img>
         </div>
 
         <div class="temperature">
-
             <div class="degree-section">
                 <h2 class="temperature-degree">degree_f</h2>
                 <span>F</span>
@@ -33,24 +45,11 @@
 
             <div><h2 class="humidity">humidity</h2></div>
 
-        <br>
-        <span>.....................</span>
-        <br>
+            <br>
+            <span>.....................</span>
+            <br>
             <div><h3 class="location-timezone">timezone</h3></div>
             <div><h3 class="localtime">localtime</h3></div>
-        </div>
-
-        <br>
-        <span>.....................</span>
-        <br>
-
-        <div id="container">
-            <form id="form" onSubmit="return false;">
-                <input id="country-input" class="autocomplete-input" type="text" placeholder="Search Location">
-                <button type="submit" value="Submit">Submit</button>
-            </form>
-                <ul class="autocomplete-list" id="country-list">
-                </ul>
         </div>
 
     </body>

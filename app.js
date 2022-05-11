@@ -1,4 +1,3 @@
-//document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("load", function() {
 const form = document.getElementById("form");
 form.addEventListener('click', Submit);
@@ -12,6 +11,7 @@ form.addEventListener('click', Submit);
   let locationRegion = document.querySelector(".city-name");
   let locationLocalTime = document.querySelector(".localtime");
   let currentHumidity = document.querySelector(".humidity");
+  let icon2 = document.getElementById("icon2");
   
 
   const proxy = "https://cros-anywhere.herokuapp.com/";
@@ -56,7 +56,7 @@ form.addEventListener('click', Submit);
         console.log(data);
         const { temp_f, temp_c, condition, humidity } = data.current;
         const { tz_id, name , country, localtime} = data.location;
-        const { text } = data.current.condition;
+        const { text, icon } = data.current.condition;
         //set DOM Elements from the API:
         temperatureDegree.textContent = Math.round(temp_f);
         temperatureDegreeC.textContent = Math.round(temp_c);
@@ -64,6 +64,7 @@ form.addEventListener('click', Submit);
         currentHumidity.textContent = `${humidity}% humidity`;
         temperatureDescription.textContent = condition.text.toLowerCase();
         locationTimezone.textContent = tz_id;
+        icon2.src = `https:${icon.replace("64x64", "128x128")}`;
 
         const currentDate1 = new Date(localtime).toLocaleTimeString();
         console.log(currentDate1);
@@ -85,40 +86,6 @@ form.addEventListener('click', Submit);
         //Set icon
         setIcons(text);
       });
-  }
-
-  function setIcons(text) {
-    const skycons = new Skycons({ color: "white" });
-    const currentIcon = "?";
-    console.log(text);
-    skycons.play();
-    //return skycons.set("icon", Skycons.PARTLY_CLOUDY_DAY);
-    if (text.includes("rain")) {
-      skycons.add(document.getElementById("icon"), Skycons.RAIN);
-    }
-    if (text.includes("cloudy")) {
-      skycons.add(document.getElementById("icon"), Skycons.PARTLY_CLOUDY_DAY);
-    }
-    if (text.includes("cloudy") && text.includes("night")) {
-      skycons.add(document.getElementById("icon"), Skycons.PARTLY_CLOUDY_NIGHT);
-    }
-    if (text.includes("cloudy")) {
-      skycons.add(document.getElementById("icon"), Skycons.CLOUDY);
-    }
-    if (text.includes("snow")) {
-      skycons.add(document.getElementById("icon"), Skycons.SNOW);
-    }
-    if (text.includes("light drizzle") || text.includes("light rain")) {
-      skycons.add(document.getElementById("icon"), Skycons.SLEET);
-    }
-    if (text.includes("sunny")) {
-      skycons.add(document.getElementById("icon"), Skycons.CLEAR_DAY);
-    }
-    if (text.includes("clear") || text.includes("light rain")) {
-      skycons.add(document.getElementById("icon"), Skycons.CLEAR_NIGHT);
-    } else {
-      skycons.add(document.getElementById("icon"), Skycons.FOG);
-    }
   }
 
     function Submit() {
