@@ -2,55 +2,15 @@
     <head>
 
         <meta charset=""UTF-8" />
-        <!-- <meta name="viewport" content="width=devide-width, initial-scale=1.0" /> -->
         <meta http-equiv="X-UA-Compatible" content=""ie=edge" />
         <link rel="stylesheet" href="./style.css">
         <title>Weather App :) :)</title>
-        <script src="skycons.js"></script>
-        <script src="app.js"></script>
-        <script async src="countries.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
-
-        <div id="container">
-            <form id="form" onSubmit="return false;">
-                <input id="country-input" class="autocomplete-input" type="text" placeholder="Search Location">
-                <button type="submit" value="Submit">Submit</button>
-            </form>
-                <ul class="autocomplete-list" id="country-list">
-                </ul>
+        <div id="title">
+            <p id="user-greeting">
+                 <span id="user-location">Hi There!</span><span id="weather_phrase"></span> Welcome to my page and thank you for stopping by and checking it out!
+            </p>
         </div>
-
-            <br>
-            <span>.....................</span>
-            <br>
-
-        <div class="location">
-            <h1 class="city-name">region-country</h1>
-            <img src="http://cdn.weatherapi.com/weather/128x128/day/113.png" id="icon2" width="128" height="128"></img>
-        </div>
-
-        <div class="temperature">
-            <div class="degree-section">
-                <h2 class="temperature-degree">degree_f</h2>
-                <span>F</span>
-                <span></span>
-                <h2 class="temperature-degree-celcius">degree_c</h3>
-                <span>C</span>
-            </div>
-
-            <div>
-                <h2 class="temperature-description">description</h2>
-            </div>
-
-            <div><h2 class="humidity">humidity</h2></div>
-
-            <br>
-            <span>.....................</span>
-            <br>
-            <div><h3 class="location-timezone">timezone</h3></div>
-            <div><h3 class="localtime">localtime</h3></div>
-        </div>
-
     </body>
-</html>
