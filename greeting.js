@@ -1,7 +1,10 @@
 window.addEventListener("load", function() {
 
   let userLocation = document.getElementById("user-location");
+  let visitor = document.getElementById("avisitor");
   let weatherPhrase = document.getElementById("weather_phrase");
+
+  
   
 
   const proxy = "https://cros-anywhere.herokuapp.com/";
@@ -42,7 +45,8 @@ async function getCoordinates(ip) {
         console.log(data);
         let { text } = data.current.condition;
         if (city != null) {
-          userLocation.innerHTML = ` Wow! A visitor from <b>${city}</b>. `;
+          userLocation.innerHTML = ` <b>${city}</b>`;
+          visitor.innerHTML = ` Wow! A visitor from`;
         }
         if(text == "Sunny") {
           weatherPhrase.innerHTML = "Today is a <b>sunny</b> day over there!";

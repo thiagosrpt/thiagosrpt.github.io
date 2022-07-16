@@ -1,0 +1,117 @@
+/* Dynamic Insertions */
+
+#user-location, #weather_phrase {
+    color: #ed236f;
+    font-weight: bold;
+}
+
+
+/*-------------------*/
+
+* {
+    font-family: 'Anonymous Pro', monospace, Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+body {
+    background-color: #50b0d5 !important;
+  }
+
+/* Navigation */
+nav {
+    text-align: center;
+    background-color: #181815b5;
+    border-radius: 0px 0px 100px 100px;
+    color: #ed236f;
+    display: flex;
+    position: relative;
+    width: 60%;
+}
+
+nav .navbar-nav li a:hover{
+    color: #ed236f !important;
+}
+
+nav .navbar-nav li a {
+    color: #aed136 !important;
+    font-family: 'Anonymous Pro', monospace, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+}
+
+nav .navbar-nav li a:active {
+    color: #50b0d5 !important;
+}
+
+.collapse {
+    justify-content: center;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* shape of nav bar */
+.tab {
+    margin: 100px;
+    position:relative;
+    background-color: silver;
+    -moz-border-radius-topleft: 30px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 30px;
+    -moz-border-radius-bottomleft: 30px;
+    -webkit-border-radius: 30px 0px 30px 30px;
+    border-radius: 30px 0px 30px 30px;
+}
+
+/* Centers divs */
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-box {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+section {
+    align-items: center;
+    width: 100%;
+}
+
+.blue-section {
+    background-color:#50b0d5;
+}
+
+.green-section {
+    background-color: #aed136 !important;
+}
+
+.black-section {
+    background-color: #272822;
+    color: white;
+}
+
+
+
+.footer {
+    align-items: center;
+    align-content: center;
+    background-color: #ed236f;
+}
+
+.grid-top {
+    display: grid;
+    max-width: 1200px;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 30px 0px 30px;
+}
+
+@media (max-width: 1000px) {
+    .grid-top {
+        grid-template-columns: 1fr;
+    }
+}
