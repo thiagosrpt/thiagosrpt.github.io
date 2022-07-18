@@ -14,7 +14,17 @@
 
 body {
     background-color: #50b0d5 !important;
+
   }
+
+h3 {
+    font-size: 40px !important;
+    color: white !important;
+    font-weight: bold;
+}
+.title-bars {
+    color: rgba(255, 255, 255, 0.503) !important;
+}
 
 /* Navigation */
 nav {
@@ -64,11 +74,15 @@ nav .navbar-nav li a:active {
 }
 
 /* Centers divs */
-.center {
+.center-text {
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     align-items: center;
+}
+
+.center-image {
+    text-align: center;
 }
 
 .content-box {
@@ -111,6 +125,14 @@ section {
     padding: 0px 30px 0px 30px;
 }
 
+
+.grid-project {
+    display: grid;
+    max-width: 1200px;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    padding: 0px 30px 0px 30px;
+}
 @media (max-width: 1000px) {
     .grid-top {
         grid-template-columns: 1fr;
