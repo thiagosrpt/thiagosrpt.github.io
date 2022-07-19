@@ -55,7 +55,7 @@ async function getCoordinates(ip) {
           weatherPhrase.innerHTML = " It seems to be a <b>nice evening</b> over there.";
         }
         if (text.includes("rain")) {
-          weatherPhrase.innerHTML = " Raining today?<b> Don't Forget your umbrella</b> !";
+          weatherPhrase.innerHTML = " Raining today?<b> Don't Forget your umbrella</b>!";
         }
         if (text.includes("Blizzard") || text.includes("reezing") || text.includes("snow")) {
           weatherPhrase.innerHTML = " Bruh... Stay warm!";

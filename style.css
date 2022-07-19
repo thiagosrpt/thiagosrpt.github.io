@@ -10,6 +10,47 @@
 
 * {
     font-family: 'Anonymous Pro', monospace, Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 19px;
+}
+
+a {
+    color: #aed136 !important;
+}
+
+a:hover {
+    color: #ed236f !important;
+}
+
+a:active {
+    color: #aed136 !important;
+}
+
+.card-title a {
+    font-size: 22px !important;
+    color: #aed136 !important;
+}
+
+.card-title a:hover {
+    color: #ed236f !important;
+}
+
+
+.card {
+    border: solid;
+    --bs-card-border-width: 1px !important;
+    --bs-card-border-color: #aed136 !important;
+    box-shadow: 2px 2px #aed136;
+}
+
+.card:hover {
+    border: solid 1px;
+    border-color: #ed236f !important;
+    box-shadow: 5px 5px #ed236f, -0.5em 0 .2em rgba(255, 151, 191, 0.494);
+}
+
+.card-body {
+    border-color: #50b0d5 !important;
+    border: solid 0px !important;
 }
 
 body {
