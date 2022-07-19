@@ -25,27 +25,42 @@
 <body>
     <!-- Nav Bar Starts -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark center-text">
-        <button class="navbar-toggler center-text" type="button" data-bs-toggle="collapse"
-            data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
         <div class="collapse navbar-collapse" id="toggleMobileMenu">
             <ul class="navbar-nav">
                 <li>
-                    <a class="nav-link" aria-expanded="false" href="#about-section">About</a>
+                    <a class="nav-link" href="#about-section">About</a>
                 </li>
                 <li>
-                    <a class="nav-link"  aria-expanded="false" href="#projects-section">Projects</a>
+                    <a class="nav-link" href="#projects-section">Projects</a>
                 </li>
                 <li>
-                    <a class="nav-link" aria-expanded="false" href="#contact-section">Contact</a>
+                    <a class="nav-link" href="#contact-section">Contact</a>
                 </li>
             </ul>
         </div>
 
+        <button class="navbar-toggler center-text" type="button" data-bs-toggle="collapse"
+            data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false"
+            aria-label="Toggle navigation" id="navButton">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </nav>
+    
+    <!-- This script will collapse navbar when clicking any other links-->
+    <script>
+        const navButton = document.getElementById('navButton')
+        const menuToggle = document.getElementById('toggleMobileMenu')
+        const navLink = document.querySelectorAll('.nav-link')
+        navLink.forEach((l) => {
+            l.addEventListener('click', () => {
+               navButton.classList.add('collapsed');
+               navButton.setAttribute('aria-expanded', "false");
+               menuToggle.classList.remove('show');
+               
+            })
+        })
+    </script>
+
     <!-- Nav Bar Ends-->
 
     <!-- Greeting Text Starts-->
@@ -108,43 +123,15 @@
 
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#">Card title</a></h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="https://github.com/thiagosrpt/CS50_projects/tree/web50/projects/2020/x/capstone" target="_blank">
+                                <div class="card h-100">
+                                    <img src="images/cs50-capstone.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="https://github.com/thiagosrpt/CS50_projects/tree/web50/projects/2020/x/capstone" target="_blank">Harvard's CS50 Capstone</a></h5>
+                                        <p class="card-text">Developed using Django, this was my captsone project for concluding CS50's Web Programming with Python and JavaScript. "So, what are we eating?" is an app to help people decide on a place to dine-in, in which every participant gets chime in. </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#">Card title</a></h5>
-                                    <p class="card-text">This is a short card.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#">Card title</a></h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#">Card title</a></h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col">
                             <div class="card h-100">
