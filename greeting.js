@@ -49,16 +49,16 @@ async function getCoordinates(ip) {
           visitor.innerHTML = ` Wow! A visitor from`;
         }
         if(text == "Sunny") {
-          weatherPhrase.innerHTML = "Today is a <b>sunny</b> day over there!";
+          weatherPhrase.innerHTML = " Today is a <b>sunny</b> day over there!";
         }
         if (text == "Clear"){
-          weatherPhrase.innerHTML = "It seems to be a <b>nice evening</b> over there.";
+          weatherPhrase.innerHTML = " It seems to be a <b>nice evening</b> over there.";
         }
         if (text.includes("rain")) {
-          weatherPhrase.innerHTML = "Raining today?<b>Don't Forget your umbrella</b> !";
+          weatherPhrase.innerHTML = " Raining today?<b> Don't Forget your umbrella</b> !";
         }
         if (text.includes("Blizzard") || text.includes("reezing") || text.includes("snow")) {
-          weatherPhrase.innerHTML = "Bruh... Stay warm!";
+          weatherPhrase.innerHTML = " Bruh... Stay warm!";
         }
       });
   }
