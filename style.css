@@ -170,10 +170,20 @@ section {
 
 .blue-section {
     background-color:#50b0d5;
+    overflow: hidden;
+}
+
+.blue-section-2 {
+    background-color:#50b0d5;
 }
 
 .green-section {
     background-color: #aed136 !important;
+}
+
+/* added this so page won't shift after message is sent div-form */
+#div-form {
+    height: 321px;
 }
 
 .black-section {
@@ -208,5 +218,38 @@ section {
 @media (max-width: 1000px) {
     .grid-top {
         grid-template-columns: 1fr;
+    }
+}
+
+/* image sections */
+
+.section1-img {
+    position: absolute;
+    left: -200px;
+    top: 5px;
+}
+
+.wrapper {
+    top: 0px;
+    position: relative;
+    height: 200px;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .section1-img {
+        width: 675px;
+        top: 60px;
+    }
+    
+    .wrapper {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        top: 0px;
+        margin-left: 35%;
+        height: 200px;
     }
 }

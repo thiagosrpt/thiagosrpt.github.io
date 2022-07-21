@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-    <script src="greeting.js"></script>
+        
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -82,10 +82,11 @@
                         id="weather_phrase"></span> Welcome to my page and thank you
                     for stopping by and checking it out!
                 </div>
-                <div class="center-image">
-                    <img src="https://en.pimg.jp/046/126/400/1/46126400.jpg" width="300px">
+                <div class="wrapper">
+                    <img class="section1-img" src="images/section1_backgtoundimg_1.gif" width="900px">
                 </div>
             </div>
+
         </div>
 
     </header>
@@ -124,7 +125,7 @@
             </div>
         </div>
 
-        <div class="section blue-section content-box" id="projects-section">
+        <div class="section blue-section-2 content-box" id="projects-section">
             <div class="grid-project center-text">
                 <h3>
                     <span class="title-bars">#</span> Projects
@@ -181,42 +182,77 @@
         <div class="section green-section content-box" id="contact-section">
             <div class="grid-top center-text">
                 <h3><span class="title-bars">#</span> Get in touch</h3>
-                <form>
 
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                <!-- Starts DIV form -->
+                <div id="div-form">
+                    <form id="contact-info">
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
                         </div>
-                    </div>
-
-                    <br>
-
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <input type="phone" class="form-control" id="inputEmail3" placeholder="Phone">
+    
+                        <br>
+    
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="phone" id="inputPhone"  class="form-control" placeholder="Phone">
+                            </div>
                         </div>
-                    </div>
-
-                    <br>
-
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                placeholder="Message"></textarea>
+    
+                        <br>
+    
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="inputMessage" rows="3"
+                                    placeholder="Message"></textarea>
+                            </div>
                         </div>
-                    </div>
-
-                    <br>
-
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <button type="Submit" class="btn btn-light">Send</button>
+    
+                        <br>
+    
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <button type="Submit" class="btn btn-light">Send</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
 
-                </form>
+                </div>
+                <!-- End DIV form -->
+
             </div>
         </div>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        /* D7B09631922EA5BC70C2C56B92A38134EA0D0EE5520E8C24DE1FC21987F6C5A55EEF3E70340717A9DC8F0A6979786303 */
+        /* 0a78211a-a17b-44ae-a3b0-98beff323949 */
+            const form = document.getElementById('contact-info');
+
+            function sendMsg(e) {
+                e.preventDefault;
+                const email = document.getElementById('inputEmail').value;
+                const phone = document.getElementById('inputPhone').value;
+                const message = document.getElementById('inputMessage').value;
+
+                console.log(email, phone, message)
+
+                const divForm = document.getElementById('contact-info');
+                /* divForm.classList.add("center-text"); */
+                divForm.innerHTML = `
+                    From: ${email} <br>
+                    Your message was successfully sent, thank you!
+                `
+
+            }
+
+            form.addEventListener('submit', sendMsg);
+
+
+
+
+    </script>
     </article>
 
     <footer>
