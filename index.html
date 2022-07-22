@@ -19,6 +19,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <script src="greeting.js"></script>
 
 </head>
 
@@ -73,21 +74,38 @@
     <!-- Greeting Text Starts-->
 
     <header>
-
-        <div class="blue-section content-box">
-
-            <div class="grid-top center-text">
-                <div id="user-greeting">
-                    <span id="avisitor"></span><span id="user-location">Hi There</span>!<span
-                        id="weather_phrase"></span> Welcome to my page and thank you
+        <!-- First section starts -->
+        <div class="top-section">
+            <div class="top-section-container">
+                <div id="user-greeting" class="user-greeting">
+                    <span id="avisitor" class="avisitor"></span><span id="user-location" class="user-location">Hi There</span>!<span
+                        id="weather_phrase" class="weather_phrase"></span> Welcome to my page and thank you
                     for stopping by and checking it out!
                 </div>
-                <div class="wrapper">
-                    <img class="section1-img" src="images/section1_backgtoundimg_1.gif" width="900px">
+                <div>
+                    <img id="image-top" class="section1-img" src="images/section1_backgtoundimg_1.png">
                 </div>
             </div>
-
         </div>
+        <!--First section ends-->
+
+        <script>
+            var imgTop = document.getElementById('image-top')
+            var imgs = ["section1_backgtoundimg_1.png","section1_backgtoundimg_2.png","section1_backgtoundimg_3.png","section1_backgtoundimg_4.png","section1_backgtoundimg_5.png"]
+            var counter = 1;
+            function switchImgTop() {
+                if(counter === 3) {
+                    counter = 0;
+                    imgTop.src = `images/${imgs[counter]}`;
+                    counter++;
+                } else {
+                    imgTop.src = `images/${imgs[counter]}`;
+                    counter++;
+                }
+            }
+
+            setInterval(switchImgTop, 500);
+        </script>
 
     </header>
 

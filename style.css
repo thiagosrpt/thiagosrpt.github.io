@@ -1,17 +1,10 @@
-/* Dynamic Insertions */
 
-#user-location, #weather_phrase {
-    color: #ed236f;
-    font-weight: bold;
-}
-
-
-/*-------------------*/
 
 * {
     font-family: 'Anonymous Pro', monospace, Verdana, Geneva, Tahoma, sans-serif !important;
-    font-size: 19px;
 }
+
+
 
 a {
     color: #aed136 !important;
@@ -55,7 +48,7 @@ a:active {
 
 body {
     background-color: #50b0d5 !important;
-
+    font-size: 19px;
   }
 
 h3 {
@@ -221,35 +214,90 @@ section {
     }
 }
 
-/* image sections */
+
+
+/* top section art */
+
+
+/* Dynamic Insertions */
+
+.user-location, .weather_phrase {
+    color: #ed236f;
+    font-weight: bold;
+    font-size: 21px;
+}
+/*-------------------*/
+
+.top-section {
+    height: 490px;
+    width: 100%;
+}
+
+.top-section-container {
+    position: relative;
+    display: flex;
+    top: -40px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
 
 .section1-img {
-    position: absolute;
-    left: -200px;
-    top: 5px;
-}
-
-.wrapper {
-    top: 0px;
     position: relative;
-    height: 200px;
+    height: 590px;
 }
 
-
+.user-greeting {
+    position: absolute;
+    width: 428;
+    top: 119px;
+    font-size: 23px !important;
+    background-color: #272822;
+    padding: 30px;
+    color: white !important;
+    height: 242px;
+}
 
 
 @media (max-width: 1000px) {
-    .section1-img {
-        width: 675px;
-        top: 60px;
+
+    .user-location, .weather_phrase {
+        color: #ed236f;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .top-section {
+        height: 360px;
+        width: 100%;
     }
     
-    .wrapper {
+    .top-section-container {
+        position: relative;
+        display: flex;
+        top: 10px;
         align-items: center;
-        text-align: center;
-        width: 100%;
-        top: 0px;
-        margin-left: 35%;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    
+    .section1-img {
+        position: relative;
+        height: 380px;
+    }
+    
+    .user-greeting {
+        position: absolute;
+        width: 280px;
         height: 200px;
+        top: 70px;
+        font-size: 17px !important;
+        background-color: #272822;
+        padding: 15px;
+        color: white !important;
+    
     }
 }
+

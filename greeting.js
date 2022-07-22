@@ -46,7 +46,7 @@ async function getCoordinates(ip) {
         let { text } = data.current.condition;
         if (city != null) {
           userLocation.innerHTML = ` <b>${city}</b>`;
-          visitor.innerHTML = ` Wow! A visitor from`;
+          visitor.innerHTML = `A visitor from`;
         }
         if(text == "Sunny") {
           weatherPhrase.innerHTML = " Today is a <b>sunny</b> day over there!";
