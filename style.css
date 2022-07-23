@@ -175,12 +175,12 @@ section {
 .div-img-mid-section-left {
     position: absolute;
     z-index: -99;
-    left: 5px;
+    left: 10%;
 }
 
 .img-mid-section-left {
     position: relative;
-    top: 1300;
+    top: 1460px;
 }
 
 .div-img-mid-section-right {
@@ -192,17 +192,6 @@ section {
 .img-mid-section-right {
     position: relative;
     top: -60;
-}
-
-@media (max-width: 400px) {
-    .div-img-mid-section-left {
-        display: none;
-    }
-
-    .div-img-mid-section-right {
-        left: 80%;
-    }
-
 }
 
 
