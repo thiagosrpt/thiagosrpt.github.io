@@ -1,5 +1,4 @@
 
-
 * {
     font-family: 'Anonymous Pro', monospace, Verdana, Geneva, Tahoma, sans-serif !important;
 }
@@ -161,6 +160,7 @@ nav .navbar-nav li a:active {
 section {
     align-items: center;
     width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -169,13 +169,13 @@ section {
 }
 
 .blue-section-2 {
-
+    overflow-x: hidden;
 }
 
 .div-img-mid-section-left {
     position: absolute;
     z-index: -99;
-    left: 10%;
+    left: 5%;
 }
 
 .img-mid-section-left {
@@ -184,14 +184,14 @@ section {
 }
 
 .div-img-mid-section-right {
-    position: absolute;
+    position: relative;
     z-index: -99;
     left: 70%;
 }
 
 .img-mid-section-right {
-    position: relative;
-    top: -60;
+    position: absolute;
+    top: -70px;
 }
 
 
@@ -215,6 +215,7 @@ section {
 .footer {
     align-items: center;
     align-content: center;
+    background-color: #ed236f;
 }
 
 .grid-top {
@@ -275,7 +276,7 @@ section {
 
 .user-greeting {
     position: absolute;
-    width: 428;
+    width: 428px;
     top: 119px;
     font-size: 23px !important;
     background-color: #272822;

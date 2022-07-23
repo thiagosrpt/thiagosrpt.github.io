@@ -1,346 +1,365 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head>
+    <head>
+        <meta charset="" UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="" ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <title>Thiago Petrimperni</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
 
-    <meta charset="" UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="" ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style.css">
-    <title>Thiago Petrimperni</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-        
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <script src="greeting.js"></script>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <script src="greeting.js"></script>
 
-</head>
+    </head>
 
-<body>
-    <!-- Nav Bar Starts -->
-    <div class="logo-container">
-        <a href="#">
-            <img src="images/logo_white_01.png" class="logo" alt="">
-        </a>
-    </div>
-
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark center-text">
-
-        <div class="collapse navbar-collapse" id="toggleMobileMenu">
-            <ul class="navbar-nav">
-                <li>
-                    <a class="nav-link" href="#about-section">About</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#projects-section">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#contact-section">Contact</a>
-                </li>
-            </ul>
+    <body>
+        <!-- Nav Bar Starts -->
+        <div class="logo-container">
+            <a href="#">
+                <img src="images/logo_white_01.png" class="logo" alt="">
+            </a>
         </div>
 
-        <button class="navbar-toggler center-text" type="button" data-bs-toggle="collapse"
-            data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false"
-            aria-label="Toggle navigation" id="navButton">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark center-text">
 
-    <!-- This script will collapse navbar when clicking any other links-->
-    <script>
-        const navButton = document.getElementById('navButton')
-        const menuToggle = document.getElementById('toggleMobileMenu')
-        const navLink = document.querySelectorAll('.nav-link')
-        navLink.forEach((l) => {
-            l.addEventListener('click', () => {
-                navButton.classList.add('collapsed');
-                navButton.setAttribute('aria-expanded', "false");
-                menuToggle.classList.remove('show');
-
-            })
-        })
-    </script>
-
-    <!-- Nav Bar Ends-->
-
-    <!-- Greeting Text Starts-->
-
-    <header>
-        <!-- First section starts -->
-        <div class="top-section">
-            <div class="top-section-container">
-                <div id="user-greeting" class="user-greeting">
-                    <span id="avisitor" class="avisitor"></span><span id="user-location" class="user-location">Hi There</span>!<span
-                        id="weather_phrase" class="weather_phrase"></span> Welcome to my page and thank you
-                    for stopping by and checking it out. 👋
-                </div>
-                <div>
-                    <img id="image-top" class="section1-img" src="images/section1_backgtoundimg_1.png">
-                </div>
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav">
+                    <li>
+                        <a class="nav-link" href="#about-section">About</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#projects-section">Projects</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#contact-section">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <!--First section ends-->
 
+            <button class="navbar-toggler center-text" type="button" data-bs-toggle="collapse"
+                data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false"
+                aria-label="Toggle navigation" id="navButton">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <!-- This script will collapse navbar when clicking any other links-->
         <script>
-            var imgTop = document.getElementById('image-top')
-            var imgs = ["section1_backgtoundimg_1.png","section1_backgtoundimg_2.png","section1_backgtoundimg_3.png","section1_backgtoundimg_4.png","section1_backgtoundimg_5.png"]
-            var counter = 1;
-            function switchImgTop() {
-                if(counter === 3) {
-                    counter = 0;
-                    imgTop.src = `images/${imgs[counter]}`;
-                    counter++;
-                } else {
-                    imgTop.src = `images/${imgs[counter]}`;
-                    counter++;
-                }
-            }
+            const navButton = document.getElementById('navButton')
+            const menuToggle = document.getElementById('toggleMobileMenu')
+            const navLink = document.querySelectorAll('.nav-link')
+            navLink.forEach((l) => {
+                l.addEventListener('click', () => {
+                    navButton.classList.add('collapsed');
+                    navButton.setAttribute('aria-expanded', "false");
+                    menuToggle.classList.remove('show');
 
-            setInterval(switchImgTop, 500);
+                })
+            })
         </script>
 
-    </header>
+        <!-- Nav Bar Ends-->
 
-    <!-- Greeting Text Ends -->
+        <!-- Greeting Text Starts-->
 
-    <article>
-        <div class="section black-section content-box" id="about-section">
-            <div class="grid-top center-text">
-                <h3>
-                    <span class="title-bars">#</span> Hi There!
-                </h3>
-                <span>
-                    <p>
-                        I am an experienced professional who combines creativity and
-                        and the excitement to learn about pretty much anything related to computers, and how it can
-                        enable businesses to scale and succeed.
-                    <p>
-                    <p>
-                        Most of my <a href="https://www.linkedin.com/in/thiago-petrimperni-003a4921" target="_blank">10+
-                            years of experience</a> have been acquired by working in the AdTech and SaaS
-                        industries. During my career, I have worked on providing support to a variety of
-                        demanding and enterprise customers and helped them overcome the challenges they face in the
-                        AdTech
-                        ecosystem from the business as well as technical pespectives as it evolves and becomes more
-                        complex.
-                    </p>
-                    <p>
-                        I am currently focusing on expanding my knowledge about Web Development - front and
-                        backend: JavaScript, Python, Django, Node.Js, and more - If you are into that as well, let's
-                        connect on <a href="https://github.com/thiagosrpt" target="_blank">GitHub</a> as I'd love to
-                        follow you
-                        and get inspired by your work. ✌️
-                    </p>
-                </span>
+        <header>
+            <!-- First section starts -->
+            <div class="top-section">
+                <div class="top-section-container">
+                    <div id="user-greeting" class="user-greeting">
+                        <span id="avisitor" class="avisitor"></span><span id="user-location" class="user-location">Hi
+                            There</span>!<span id="weather_phrase" class="weather_phrase"></span> Welcome to my page and
+                        thank you
+                        for stopping by and checking it out. 👋
+                    </div>
+                    <div>
+                        <img id="image-top" class="section1-img" src="images/section1_backgtoundimg_1.png">
+                    </div>
+                </div>
             </div>
-        </div>
+            <!--First section ends-->
 
-        <div class="section blue-section-2 content-box" id="projects-section">
-            <div class="div-img-mid-section-left">
-                <img class="img-mid-section-left" src="images/mid-section-img-left.jpg" width="300px">
+            <script>
+                var imgTop = document.getElementById('image-top')
+                var imgs = ["section1_backgtoundimg_1.png", "section1_backgtoundimg_2.png", "section1_backgtoundimg_3.png", "section1_backgtoundimg_4.png", "section1_backgtoundimg_5.png"]
+                var counter = 1;
+                function switchImgTop() {
+                    if (counter === 3) {
+                        counter = 0;
+                        imgTop.src = `images/${imgs[counter]}`;
+                        counter++;
+                    } else {
+                        imgTop.src = `images/${imgs[counter]}`;
+                        counter++;
+                    }
+                }
+
+                setInterval(switchImgTop, 500);
+            </script>
+
+        </header>
+
+        <!-- Greeting Text Ends -->
+
+        <article>
+            <div class="section black-section content-box" id="about-section">
+                <div class="grid-top center-text">
+                    <h3>
+                        <span class="title-bars">#</span> Hi There!
+                    </h3>
+                    <span>
+                        <p>
+                            I am an experienced professional who combines creativity and
+                            and the excitement to learn about pretty much anything related to computers, and how it can
+                            enable businesses to scale and succeed.
+                        <p>
+                        <p>
+                            Most of my <a href="https://www.linkedin.com/in/thiago-petrimperni-003a4921" target="_blank">10+
+                                years of experience</a> have been acquired by working in the AdTech and SaaS
+                            industries. During my career, I have worked on providing support to a variety of
+                            demanding and enterprise customers and helped them overcome the challenges they face in the
+                            AdTech
+                            ecosystem from the business as well as technical pespectives as it evolves and becomes more
+                            complex.
+                        </p>
+                        <p>
+                            I am currently focusing on expanding my knowledge about Web Development - front and
+                            backend: JavaScript, Python, Django, Node.Js, and more - If you are into that as well, let's
+                            connect on <a href="https://github.com/thiagosrpt" target="_blank">GitHub</a> as I'd love to
+                            follow you
+                            and get inspired by your work. ✌️
+                        </p>
+                    </span>
+                </div>
             </div>
 
-            <div class="div-img-mid-section-right">
-                <img class="img-mid-section-right" src="images/mid-section-img-right.jpg" width="300px">
-            </div>
+            <div class="section blue-section-2 content-box" id="projects-section">
+                <div class="div-img-mid-section-left">
+                    <img class="img-mid-section-left" src="images/mid-section-img-left.jpg" width="300px">
+                </div>
 
-            <div class="grid-project center-text">
-                <h3>
-                    <span class="title-bars">#</span> Projects
-                </h3>
-                <div>
-                    <!-- Cards Start -->
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
-                            <a href="https://github.com/thiagosrpt/CS50_projects/tree/web50/projects/2020/x/capstone"
-                                target="_blank">
+                <div class="div-img-mid-section-right">
+                    <img class="img-mid-section-right" src="images/mid-section-img-right.jpg" width="300px">
+                </div>
+
+                <div class="grid-project center-text">
+                    <h3>
+                        <span class="title-bars">#</span> Projects
+                    </h3>
+                    <div>
+                        <!-- Cards Start -->
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col">
+                                <a href="https://github.com/thiagosrpt/CS50_projects/tree/web50/projects/2020/x/capstone"
+                                    target="_blank">
+                                    <div class="card h-100">
+                                        <img src="images/cs50-capstone.jpg" class="card-img-top" alt="CS50's Web Programming with Python and JS" heigh="100px">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a
+                                                    href="https://github.com/thiagosrpt/CS50_projects/tree/web50/projects/2020/x/capstone"
+                                                    target="_blank">Harvard's CS50 Capstone</a></h5>
+                                            <p class="card-text">Developed using Django, this was my captsone project for
+                                                concluding CS50's Web Programming with Python and JS. "So, what are
+                                                we eating?" is an app to help people decide on a place to dine-in. </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
                                 <div class="card h-100">
-                                    <img src="images/cs50-capstone.jpg" class="card-img-top" alt="...">
+                                    <img src="images/path-realtime-api-project.jpg" class="card-img-top" alt="Real ETA - NJ-NY PATH Trains" >
                                     <div class="card-body">
-                                        <h5 class="card-title"><a
-                                                href="https://github.com/thiagosrpt/CS50_projects/tree/web50/projects/2020/x/capstone"
-                                                target="_blank">Harvard's CS50 Capstone</a></h5>
-                                        <p class="card-text">Developed using Django, this was my captsone project for
-                                            concluding CS50's Web Programming with Python and JS. "So, what are
-                                            we eating?" is an app to help people decide on a place to dine-in. </p>
+                                        <h5 class="card-title"><a href="https://github.com/thiagosrpt/real_time_tracker"
+                                                target="_blank">Real ETA - NJ-NY PATH Trains</a></h5>
+                                        <p class="card-text">PATH is the subway system that connects Jersey City and
+                                            Manhattan, using PATH's public API, I created markers for each station and by
+                                            clicking on the marker you get to see the status and ETA for the trains at the
+                                            station.</p>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="https://github.com/thiagosrpt/real_time_tracker" target="_blank">Real ETA - NJ-NY PATH Trains</a></h5>
-                                    <p class="card-text">PATH is the subway system that connects Jersey City and Manhattan, using PATH's public API, I created markers for each station and by clicking on the marker you get to see the status and ETA for the trains at the station.</p>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/weather-app-api-project.jpg" class="card-img-top" alt="Weather App">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="https://github.com/thiagosrpt/weatherapp"
+                                                target="_blank">Weather App</a></h5>
+                                        <p class="card-text">This is an experiment to learn how to manipulate JSON payloads
+                                            with JavaScript and displaying the data using HTML and CSS. this app utilizes
+                                            data source from 3 endpoints.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="https://github.com/thiagosrpt/weatherapp" target="_blank">Weather App</a></h5>
-                                    <p class="card-text">This is an experiment to learn how to manipulate JSON payloads with JavaScript and displaying the data using HTML and CSS. thisapp utilizes data source from 3 endpoints.</p>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/currency-app-api-project.jpg" class="card-img-top" alt="Currency Converter">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="https://github.com/thiagosrpt/currency-converter"
+                                                target="_blank">Currency Converter</a></h5>
+                                        <p class="card-text">Basic Browser-Based Currency Conversion APP that takes a value
+                                            entered by the user and converts it from a given currency into the currency
+                                            selected by the user.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="https://github.com/thiagosrpt/currency-converter" target="_blank">Currency Converter</a></h5>
-                                    <p class="card-text">Basic Browser-Based Currency Conversion APP that takes a value entered by the user and converts it from a given currency into the currency selected by the user.</p>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/urlshortner-app-api-project.jpg" class="card-img-top" alt="shirLink - URL Shortner">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="https://github.com/thiagosrpt/shirLink"
+                                                target="_blank">shirLink - URL Shortner</a></h5>
+                                        <p class="card-text">Simple URL shortner using Django deployed to Heroku - Shorter Urls are created using
+                                            Server Generated UID. Client Generate ID creates URL in DB, but is not
+                                            exposed on client side.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="https://github.com/thiagosrpt/shirLink" target="_blank">shirLink - URL Shortner</a></h5>
-                                    <p class="card-text">Simple URL shortner using Django. This version generate unique IDs on client and server side as an example - Shorter Urls are created using Server Generated UID. Client Generate ID creates URL in DB, but those are not exposed to the user.</p>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="#">Card title</a></h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural
+                                            lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#">Card title</a></h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="#">Card title</a></h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural
+                                            lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#">Card title</a></h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="#">Card title</a></h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural
+                                            lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#">Card title</a></h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100">
-                                <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#">Card title</a></h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/project_placeholder.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="#">Card title</a></h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural
+                                            lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Cards End -->
-
-            </div>
-        </div>
-        </div>
-
-        <div class="section green-section content-box" id="contact-section">
-            <div class="grid-top center-text">
-                <h3><span class="title-bars">#</span> Get in touch</h3>
-
-                <!-- Starts DIV form -->
-                <div id="div-form">
-                    <form id="contact-info">
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                            </div>
-                        </div>
-    
-                        <br>
-    
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <input type="phone" id="inputPhone"  class="form-control" placeholder="Phone">
-                            </div>
-                        </div>
-    
-                        <br>
-    
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <textarea class="form-control" id="inputMessage" rows="3"
-                                    placeholder="Message"></textarea>
-                            </div>
-                        </div>
-    
-                        <br>
-    
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <button type="Submit" class="btn btn-light">Send</button>
-                            </div>
-                        </div>
-                    </form>
+                    <!-- Cards End -->
 
                 </div>
-                <!-- End DIV form -->
-
             </div>
-        </div>
-    
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        /* D7B09631922EA5BC70C2C56B92A38134EA0D0EE5520E8C24DE1FC21987F6C5A55EEF3E70340717A9DC8F0A6979786303 */
-        /* 0a78211a-a17b-44ae-a3b0-98beff323949 */
-            const form = document.getElementById('contact-info');
+            </div>
 
-            function sendMsg(e) {
-                e.preventDefault;
-                const email = document.getElementById('inputEmail').value;
-                const phone = document.getElementById('inputPhone').value;
-                const message = document.getElementById('inputMessage').value;
+            <div class="section green-section content-box" id="contact-section">
+                <div class="grid-top center-text">
+                    <h3><span class="title-bars">#</span> Get in touch</h3>
 
-                console.log(email, phone, message)
+                    <!-- Starts DIV form -->
+                    <div id="div-form">
+                        <form id="contact-info">
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                            </div>
 
-                const divForm = document.getElementById('contact-info');
-                /* divForm.classList.add("center-text"); */
-                divForm.innerHTML = `
-                    From: ${email} <br>
-                    Your message was successfully sent, thank you!
-                `
+                            <br>
 
-            }
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <input type="phone" id="inputPhone" class="form-control" placeholder="Phone">
+                                </div>
+                            </div>
 
-            form.addEventListener('submit', sendMsg);
+                            <br>
+
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="inputMessage" rows="3"
+                                        placeholder="Message"></textarea>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <button type="Submit" class="btn btn-light">Send</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- End DIV form -->
+
+                </div>
+            </div>
+
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                /* D7B09631922EA5BC70C2C56B92A38134EA0D0EE5520E8C24DE1FC21987F6C5A55EEF3E70340717A9DC8F0A6979786303 */
+                /* 0a78211a-a17b-44ae-a3b0-98beff323949 */
+                const form = document.getElementById('contact-info');
+
+                function sendMsg(e) {
+                    e.preventDefault;
+                    const email = document.getElementById('inputEmail').value;
+                    const phone = document.getElementById('inputPhone').value;
+                    const message = document.getElementById('inputMessage').value;
+
+                    console.log(email, phone, message)
+
+                    const divForm = document.getElementById('contact-info');
+                    /* divForm.classList.add("center-text"); */
+                    divForm.innerHTML = `
+                            From: ${email} <br>
+                            Your message was successfully sent, thank you!
+                        `
+
+                }
+
+                form.addEventListener('submit', sendMsg);
 
 
 
 
-    </script>
-    </article>
+            </script>
+        </article>
 
-    <footer>
-        <div class="footer content-box">
-        </div>
-    </footer>
+        <footer>
+            <div class="footer content-box">
+            </div>
+        </footer>
+
+        <!--Required for responsive top menu-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 
 
+    </body>
 
-
-</body>
+</html>
