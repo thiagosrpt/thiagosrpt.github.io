@@ -51,6 +51,7 @@ a:active {
 body {
     background-color: #50b0d5 !important;
     font-size: 19px;
+    overflow-x: hidden;
   }
 
 h3 {
@@ -164,13 +165,46 @@ section {
 
 
 .blue-section {
-    background-color:#50b0d5;
     overflow: hidden;
 }
 
 .blue-section-2 {
-    background-color:#50b0d5;
+
 }
+
+.div-img-mid-section-left {
+    position: absolute;
+    z-index: -99;
+    left: 5px;
+}
+
+.img-mid-section-left {
+    position: relative;
+    top: 1300;
+}
+
+.div-img-mid-section-right {
+    position: absolute;
+    z-index: -99;
+    left: 70%;
+}
+
+.img-mid-section-right {
+    position: relative;
+    top: -60;
+}
+
+@media (max-width: 400px) {
+    .div-img-mid-section-left {
+        display: none;
+    }
+
+    .div-img-mid-section-right {
+        left: 80%;
+    }
+
+}
+
 
 .green-section {
     background-color: #aed136 !important;
@@ -182,9 +216,9 @@ section {
 }
 
 .black-section {
-    background-color: #272822;
+    background-color: #272822e3;
     color: white;
-    box-shadow: 10px 10px 10px 10px #6c6c6c;
+    box-shadow: 0px 0px 20px 10px #34819f;
 }
 
 
