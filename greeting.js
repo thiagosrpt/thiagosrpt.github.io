@@ -44,21 +44,28 @@ async function getCoordinates(ip) {
       .then((data) => {
         console.log(data);
         let { text } = data.current.condition;
+        let { feelslike_f } = data.current;
         if (city != null) {
           userLocation.innerHTML = ` <b>${city}</b>`;
           visitor.innerHTML = `A visitor from`;
         }
-        if(text == "Sunny") {
-          weatherPhrase.innerHTML = " Today is a <b>sunny</b> day over there!";
+        if(text === "Sunny") {
+          weatherPhrase.innerHTML = " It's seems to be a ☀️ day over there!";
+        }
+        if(feelslike_f > 85) {
+          weatherPhrase.innerHTML = " It's hot today 🥵, stay hydrated.";
         }
         if (text == "Clear"){
-          weatherPhrase.innerHTML = " It seems to be a <b>nice evening</b> over there.";
+          weatherPhrase.innerHTML = " It seems to be a <b>nice evening</b> over there 🌙.";
         }
         if (text.includes("rain")) {
           weatherPhrase.innerHTML = " Raining today?<b> Don't Forget your umbrella</b>!";
         }
         if (text.includes("Blizzard") || text.includes("reezing") || text.includes("snow")) {
           weatherPhrase.innerHTML = " Bruh... Stay warm!";
+        }
+        if(feelslike_f < 44) {
+          weatherPhrase.innerHTML = " Bruh! it's cold 🥶, stay warm.";
         }
       });
   }
