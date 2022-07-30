@@ -321,8 +321,8 @@ section {
         top: 70px;
         font-size: 17px !important;
         background-color: #272822;
-        padding: 15px;
         color: white !important;
+        padding: 15px 0px 0px 15px;
     
     }
 }
