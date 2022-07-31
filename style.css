@@ -172,16 +172,23 @@ section {
     overflow-x: hidden;
 }
 
+
+
 .div-img-mid-section-left {
     position: absolute;
-    z-index: -99;
-    left: 5%;
+    text-align: right;
+    width: 100%;
 }
 
 .img-mid-section-left {
     position: relative;
-    top: 1460px;
+    z-index: -99;
+    top: -430px;
+    right: 30%;
 }
+
+
+
 
 .div-img-mid-section-right {
     position: relative;

@@ -61,7 +61,7 @@ async function getCoordinates(ip) {
         }
 
         if(text === "Partly cloudy" && feelslike_f > 80 && hour > 18) {
-          weatherPhrase.innerHTML = " It seems to be a nice pleasant evening 🌙";
+          weatherPhrase.innerHTML = " It seems to be a pleasant evening 🌙";
         }
 
         if(feelslike_f > 86) {
