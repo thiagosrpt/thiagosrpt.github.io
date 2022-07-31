@@ -341,21 +341,21 @@ section {
     position: absolute;
     min-width: 300px;
     max-width: 500px;
-    margin-left: 15%;
+    margin-left: clamp(90px, 15%, 500px);
     text-align: left;
 }
 
 .gear_1_img{
     position: relative;
-    width: 35%;
-    max-width: 150px;
+    width: 40%;
+    max-width: 175px;
     top: 20px;
     animation:spin 15s linear infinite;
 }
 .gear_2_img{
     position: relative;
-    width: 25%;
-    max-width: 100px;
+    width: 30%;
+    max-width: 125px;
     top: 50px;
     left: -30px;
     animation:spin2 15s linear infinite;
