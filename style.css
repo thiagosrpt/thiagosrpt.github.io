@@ -221,11 +221,13 @@ section {
     z-index: 99;
     width: 100%;
     text-align: left;
+    
 }
 
 .profile-img img {
     width: 240px;
     border-radius: 50%;
+    box-shadow: 5px 5px 0px 2px #aed136;
 }
 
 
