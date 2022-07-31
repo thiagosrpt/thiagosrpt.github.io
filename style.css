@@ -339,24 +339,23 @@ section {
 
 .gear_1 {
     position: absolute;
-    width: 100%;
-    max-width: 1200px;
+    min-width: 300px;
+    max-width: 500px;
     margin-left: 15%;
-    background-color: rgba(127, 255, 212, 0.436);
     text-align: left;
 }
 
 .gear_1_img{
     position: relative;
-    width: 30%;
-    max-width: 125px;
-    top: 5px;
+    width: 35%;
+    max-width: 150px;
+    top: 20px;
     animation:spin 15s linear infinite;
 }
 .gear_2_img{
     position: relative;
-    width: 20%;
-    max-width: 85px;
+    width: 25%;
+    max-width: 100px;
     top: 50px;
     left: -30px;
     animation:spin2 15s linear infinite;
