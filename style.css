@@ -339,23 +339,25 @@ section {
 
 .gear_1 {
     position: absolute;
-    width: 25%;
-    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
 }
 
 .gear_1_img{
     position: relative;
     width: 30%;
     max-width: 125px;
-    top: 20px;
+    top: 310px;
+    left: -100px;
     animation:spin 15s linear infinite;
 }
 .gear_2_img{
     position: relative;
     width: 20%;
     max-width: 85px;
-    top: 50px;
-    left: -15px;
+    top: 350px;
+    left: -120px;
     animation:spin2 15s linear infinite;
 }
 
@@ -364,21 +366,23 @@ section {
 
 @media (max-width: 800px) {
     .gear_1 {
-        position: absolute;
-        width: 50%;
-        text-align: center;
-    }
-    .gear_1_img{
         position: relative;
-        width: 45%;
-        min-width: 60px;
-        top: 20px;
+        background-color: #34819f;
+        max-width: 1200px;
+    }
+
+    .gear_1_img{
+        position: absolute;
+        min-width: 100px;
+        max-width: 125px;
+        top: 130%;
+        left: -40px;
     }
     .gear_2_img{
-        position: relative;
-        width: 35%;
-        min-width: 40px;
-        top: 50px;
-        left: -15px;
+        position: absolute;
+        min-width: 75px;
+        max-width: 100px;
+        top: 70px;
+        left: 5px;
     }
 }
