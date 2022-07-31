@@ -368,23 +368,24 @@ section {
 .gear_1_img{
     position: relative;
     width: 40%;
-    max-width: 175px;
-    top: 20px;
+    max-width: 200px;
+    top: -80px;
+    left: 20px;
     animation:spin 15s linear infinite;
 }
 .gear_2_img{
     position: relative;
     width: 30%;
-    max-width: 125px;
-    top: 50px;
-    left: -30px;
+    max-width: 160px;
+    top: 30px;
+    left: -40px;
     animation:spin2 15s linear infinite;
 }
 
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 @keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     .gear_1 {
         position: relative;
         background-color: #34819f;
