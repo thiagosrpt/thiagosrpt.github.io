@@ -322,8 +322,56 @@ section {
         font-size: 17px !important;
         background-color: #272822;
         color: white !important;
-        padding: 15px 0px 0px 15px;
+        padding: 15px 15px 0px 15px;
     
     }
 }
 
+
+/* MID GEARS */
+
+.gear_1 {
+    position: absolute;
+    width: 25%;
+    text-align: center;
+}
+
+.gear_1_img{
+    position: relative;
+    width: 30%;
+    max-width: 125px;
+    top: 20px;
+    animation:spin 15s linear infinite;
+}
+.gear_2_img{
+    position: relative;
+    width: 20%;
+    max-width: 85px;
+    top: 50px;
+    left: -15px;
+    animation:spin2 15s linear infinite;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@media (max-width: 800px) {
+    .gear_1 {
+        position: absolute;
+        width: 50%;
+        text-align: center;
+    }
+    .gear_1_img{
+        position: relative;
+        width: 45%;
+        min-width: 60px;
+        top: 20px;
+    }
+    .gear_2_img{
+        position: relative;
+        width: 35%;
+        min-width: 40px;
+        top: 50px;
+        left: -15px;
+    }
+}

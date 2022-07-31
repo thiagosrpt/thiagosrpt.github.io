@@ -30,11 +30,12 @@ async function getCoordinates(ip) {
         const { lat } = data;
         const { lon } = data;
         const { city } = data;
-        getWeather(lat, lon, city);
+        const { regionName} = data;
+        getWeather(lat, lon, city, regionName);
       });
   }
 
-  async function getWeather(lat, log, city) {
+  async function getWeather(lat, log, city, regionName) {
     const api = await `${[[proxy]]}https://api.weatherapi.com/v1/current.json?key=c2ef9cc9ff124396863165707220705&q=${lat},${log}&aqi=no`; // REAL REQUEST
 
     fetch(api)
@@ -45,25 +46,40 @@ async function getCoordinates(ip) {
         console.log(data);
         let { text } = data.current.condition;
         let { feelslike_f } = data.current;
+        let { localtime } = data.location;
+        let hour = localtime.substring(10,13);
         if (city != null) {
-          userLocation.innerHTML = ` <b>${city}</b>`;
-          visitor.innerHTML = `A visitor from`;
+          visitor.innerHTML = `Visiting from `;
+          userLocation.innerHTML = ` <b>${regionName}?</b>`;
         }
         if(text === "Sunny") {
-          weatherPhrase.innerHTML = " It's seems to be a ☀️ day over there!";
+          weatherPhrase.innerHTML = " It seems to be a ☀️ day over there!";
         }
-        if(feelslike_f > 85) {
-          weatherPhrase.innerHTML = " It's hot today 🥵, stay hydrated.";
+
+        if(text === "Partly cloudy" && feelslike_f > 80 && hour < 18) {
+          weatherPhrase.innerHTML = " It seems to be a nice day 🌤️ enjoy!";
         }
+
+        if(text === "Partly cloudy" && feelslike_f > 80 && hour > 18) {
+          weatherPhrase.innerHTML = " It seems to be a nice pleasant evening 🌙";
+        }
+
+        if(feelslike_f > 86) {
+          weatherPhrase.innerHTML = " It's hot today 🥵 over there, stay hydrated.";
+        }
+
         if (text == "Clear"){
           weatherPhrase.innerHTML = " It seems to be a <b>nice evening</b> over there 🌙.";
         }
+
         if (text.includes("rain")) {
-          weatherPhrase.innerHTML = " Raining today?<b> Don't Forget your umbrella</b>!";
+          weatherPhrase.innerHTML = " Raining today? 🌧️<b> Don't Forget your umbrella ☂️ </b>!";
         }
+
         if (text.includes("Blizzard") || text.includes("reezing") || text.includes("snow")) {
-          weatherPhrase.innerHTML = " Bruh... Stay warm!";
+          weatherPhrase.innerHTML = " Bruh...🥶 Stay warm!";
         }
+
         if(feelslike_f < 44) {
           weatherPhrase.innerHTML = " Bruh! it's cold 🥶, stay warm.";
         }
