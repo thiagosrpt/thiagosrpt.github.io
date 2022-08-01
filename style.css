@@ -215,6 +215,7 @@ section {
 /* added this so page won't shift after message is sent div-form */
 #div-form {
     height: 321px;
+    z-index: 1000;
 }
 
 .black-section {
@@ -250,6 +251,7 @@ section {
     grid-template-columns: 1fr 2fr;
     padding: 0px 40px 0px 40px;
 }
+
 
 
 .grid-project {
