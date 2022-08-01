@@ -409,3 +409,36 @@ section {
         left: 5px;
     }
 }
+
+/* back to top icon */
+
+.to-top {
+    position: fixed;
+    top: 87%;
+    left: 80%;
+    z-index: 100;
+    max-width: 150px;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    animation:up 2s linear infinite;
+    transition: all 0.3s;
+}
+
+.to-top:active {
+    display: block;
+    opacity: 100%;
+}
+
+
+@media (max-width: 1000px) {
+    .to-top {
+        left: 60%;
+    }
+}
+
+@keyframes up {
+    0% { top: 87%;}
+    50% {top: 86%; }
+    100% { top: 87%;}
+}

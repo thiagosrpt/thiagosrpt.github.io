@@ -86,7 +86,19 @@ async function getCoordinates(ip) {
       });
   }
 
+  const toTop = document.querySelector(".to-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+      toTop.style.opacity = "0.6";
+    } else {
+      toTop.style.opacity = "0";
+    }
+  });
+
 });
+
+
 
 
 
