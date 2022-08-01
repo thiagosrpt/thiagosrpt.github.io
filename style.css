@@ -170,6 +170,8 @@ section {
 
 .blue-section-2 {
     overflow-x: hidden;
+    z-index: -99;
+    background: radial-gradient(circle, rgba(80,176,213,1) 0%, rgba(70,166,203,1) 53%, rgba(162,229,255,1) 100%);
 }
 
 
