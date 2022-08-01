@@ -73,7 +73,7 @@ async function getCoordinates(ip) {
         }
 
         if (text.includes("rain")) {
-          weatherPhrase.innerHTML = " Raining today? 🌧️<b> Don't Forget your umbrella ☂️ </b>!";
+          weatherPhrase.innerHTML = " It may rain today 🌧️<b> Don't forget your umbrella ☂️ </b>!";
         }
 
         if (text.includes("Blizzard") || text.includes("reezing") || text.includes("snow")) {
