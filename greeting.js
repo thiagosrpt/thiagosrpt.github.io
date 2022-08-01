@@ -90,7 +90,7 @@ async function getCoordinates(ip) {
 
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
-      toTop.style.opacity = "0.6";
+      toTop.style.opacity = "0.7";
     } else {
       toTop.style.opacity = "0";
     }

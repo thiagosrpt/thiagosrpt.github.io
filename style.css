@@ -3,6 +3,10 @@
     font-family: 'Anonymous Pro', monospace, Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 div {
     font-size: 19px;
 }
@@ -421,14 +425,11 @@ section {
     overflow: hidden;
     width: 120px;
     height: 120px;
+    opacity: 0%;
     animation:up 2s linear infinite;
     transition: all 0.3s;
 }
 
-.to-top:active {
-    display: block;
-    opacity: 100%;
-}
 
 
 @media (max-width: 1000px) {
