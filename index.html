@@ -141,18 +141,20 @@
                         <div class="topart-gear11">
                             <img src="images/topart-gear11.webp" style="height: 100%; width: 100%;"alt="Top-section art with monitor with greeting message.">
                         </div>
+                        <div class="topart-lightbulb">
+                            <img id="topart-lightbulb" src="images/topart-lightbulb1.webp" style="height: 100%; width: 100%;"alt="Top-section art with monitor with greeting message.">
+                        </div>
                     </div>
                 </div>
             </div>
             <!--First section ends-->
 
             <script>
-                /*
-                var imgTop = document.getElementById('image-top')
-                var imgs = ["section1_backgtoundimg_1.webp", "section1_backgtoundimg_2.webp", "section1_backgtoundimg_3.webp", "section1_backgtoundimg_4.webp", "section1_backgtoundimg_5.webp"]
+                var imgTop = document.getElementById('topart-lightbulb')
+                var imgs = ["topart-lightbulb1.webp", "topart-lightbulb2.webp"]
                 var counter = 1;
                 function switchImgTop() {
-                    if (counter === 3) {
+                    if (counter === 2) {
                         counter = 0;
                         imgTop.src = `images/${imgs[counter]}`;
                         counter++;
@@ -162,8 +164,7 @@
                     }
                 }
 
-                setInterval(switchImgTop, 500);
-                */
+                setInterval(switchImgTop, 2000);
             </script>
 
         </header>
@@ -207,10 +208,11 @@
             </div>
 
             <div class="section blue-section-2 content-box" id="projects-section">
-
+                <!-- Remove
                 <div class="div-img-mid-section-right">
                     <img class="img-mid-section-right" src="images/mid-section-img-right.jpg" width="300px" alt="background small image">
                 </div>
+                -->
 
                 <div class="grid-project center-text">
                     <h1>
@@ -325,8 +327,12 @@
             </div>
 
             <div class="section green-section content-box" id="contact-section">
-                <div class="div-img-mid-section-left">
-                    <img class="img-mid-section-left" src="images/mid-section-img-left.jpg" width="300px" alt="background images">
+
+                <div class="bottomart-coffeemug">
+                    <div class="bottomart-coffeemug-container">
+                        <img class="bottomart-coffeemug-img" src="images/bottomart-coffeemug.webp" width="300px" alt="background images">
+                        <img class="bottomart-gear-img" src="images/gear-bottomart-contact.webp" width="300px" alt="background images">
+                    </div>
                 </div>
                 <div class="grid-top center-text">
                     <h3><span class="title-bars">#</span> Get in touch</h3>
