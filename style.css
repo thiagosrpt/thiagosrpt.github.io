@@ -474,14 +474,8 @@ section {
     top: 254px;
     left: 503px;
     text-align: center;
-    animation: half_spin 1s linear infinite;
 }
 
-@keyframes half_spin { 
-    33% { -webkit-transform: rotate(0deg); transform:rotate(0deg); } 
-    66% { -webkit-transform: rotate(2deg); transform:rotate(2deg); }
-    100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); } 
-}
 
 .topart-lightbulb {
     position: absolute;
