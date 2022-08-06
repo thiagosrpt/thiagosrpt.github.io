@@ -71,7 +71,8 @@ h3 {
 /* Navigation */
 nav {
     text-align: center;
-    background-color: #181815b5;
+    background-color: #181815b5 ;
+    backdrop-filter: blur(0.5rem) brightness(1.75);
     border-radius: 0px 0px 100px 100px;
     color: #ed236f;
     display: flex;
@@ -176,8 +177,6 @@ section {
     z-index: -99;
 }
 
-
-
 .div-img-mid-section-left {
     position: absolute;
     text-align: right;
@@ -190,7 +189,6 @@ section {
     top: -430px;
     right: 30%;
 }
-
 
 
 
@@ -212,7 +210,6 @@ section {
 }
 
 .bottomart-coffeemug {
-    max-width: 1200px;
     height: 0px;
     width: 100%;
     left:0;
@@ -225,7 +222,10 @@ section {
 .bottomart-coffeemug-container {
     position: relative;
     overflow: hidden;
-    top: -311px;
+    top: -320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bottomart-coffeemug-img {
     position: relative;
@@ -233,11 +233,18 @@ section {
     height: 275px;
     width: auto;
 }
-.bottomart-gear-img {
+
+.bottomart-gear-img-container {
     position: absolute;
+    width: 710px;
+    text-align: left;
+}
+
+.bottomart-gear-img {
+    position: relative;
     top: 89px;
     height: 275px;
-    left: 21%;
+    left: 0px;
     width: auto;
     animation:spin_clock 20s linear infinite;
 }
@@ -245,7 +252,7 @@ section {
 /* added this so page won't shift after message is sent div-form */
 #div-form {
     height: 321px;
-    z-index: 1000;
+    z-index: 90;
 }
 
 .black-section {
@@ -322,15 +329,15 @@ section {
 /*---------TOP SECTION ART STARTS----------*/
 
 .top-section {
+    position: relative;
     height: 490px;
     width: 100%;
-    background-color: #50b0d5;
 }
 
 .top-section-container {
     position: relative;
     display: flex;
-    top: -40px;
+    top: -26px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -508,11 +515,14 @@ section {
         height: 360px;
         width: 100%;
     }
+    .section1-top-art{
+        top: 47px;
+    }
     
     .top-section-container {
         position: relative;
         display: flex;
-        top: 0px;
+        top: -22px;
         align-items: center;
         justify-content: center;
     }
@@ -557,11 +567,11 @@ section {
 
     .topart-gear6 {
         top: 12px;
-        left: 564px;
+        left: 571px;
     }
 
     .topart-gear7 {
-        top: -36px;
+        top: -48px;
         left: 607px;
         width: 75px;
         height: 75px;
@@ -596,13 +606,11 @@ section {
         width: auto;
     }
 
-
-    
     .user-greeting {
         position: absolute;
         width: 280px;
         height: 200px;
-        top: 70px;
+        top: 115px;
         font-size: 17px !important;
         background-color: #272822;
         color: white !important;
@@ -610,6 +618,61 @@ section {
     
     }
 }
+
+@media (max-width: 500px) {
+
+    .topart-gear1 {
+        top: 333px;
+        left: 599px;
+        height: 110px;
+        width: 110px;
+    }
+    
+    .topart-gear2 {
+        height: 80px;
+        width: 80px;
+        top: 385px;
+        left: 697px;
+    }
+
+    .topart-gear3 {
+        height: 95px;
+        width: 95px;
+        top: 278px;
+        left: 872px;
+    }
+
+    .topart-gear4 {
+        display: none;
+    }
+
+    .topart-gear8 {
+        display: none;
+    }
+
+    .topart-gear9 {
+        top: 366px;
+        left: 341px;
+
+    }
+
+    .topart-gear10 {
+        top: 330px;
+        left: 400px;
+    }
+
+    .topart-gear11 {
+        display: none;
+    }
+
+    .topart-lightbulb {
+    top: 22px;
+    left: 701px;
+    height: 63px;
+    width: auto;
+    }
+}
+
 /* -- TOP SECTION ART ENDS -- */
 
 /* MID GEARS */
