@@ -603,7 +603,7 @@ section {
         top: 209px;
         left: 91px;
         height: 90px;
-        width: auto;
+        width: 57px;
     }
 
     .user-greeting {
@@ -666,10 +666,10 @@ section {
     }
 
     .topart-lightbulb {
-    top: 22px;
-    left: 701px;
-    height: 63px;
-    width: auto;
+        top: 22px;
+        left: 701px;
+        height: 63px;
+        width: 43px;
     }
 }
 
