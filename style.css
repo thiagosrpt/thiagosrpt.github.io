@@ -341,6 +341,7 @@ section {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    height: 1250px;
 }
 
 
@@ -348,6 +349,7 @@ section {
     position: relative;
     height: 590px;
     text-align: center;
+    top: -329px;
 }
 
 .section1-img {
@@ -516,7 +518,7 @@ section {
         width: 100%;
     }
     .section1-top-art{
-        top: 47px;
+        top: -282px;
     }
     
     .top-section-container {
