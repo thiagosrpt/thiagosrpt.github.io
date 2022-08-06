@@ -469,6 +469,7 @@ section {
 .topart-gear11 {
     position: absolute;
     height: 160px;
+    width: 54px;
     z-index: 98;
     top: 254px;
     left: 503px;
@@ -599,6 +600,7 @@ section {
         top: 156px;
         left: 322px;
         height: 105px;
+        width: 36px;
     }
 
     .topart-lightbulb {

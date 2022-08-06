@@ -145,63 +145,63 @@ const gear11Style = getComputedStyle(gear11);
 const gear11LeftPosition = parseInt(gear11Style.left.replace('px',''));
 const gear11TopPosition = parseInt(gear11Style.top.replace('px',''));
 
+  window.addEventListener("scroll", () => {
+    
+    // GEAR 1
+    let gear1NewLeftPosition = gear1LeftPosition + window.scrollY;
+    let gear1NewTopPosition = gear1TopPosition - window.scrollY;
+    gear1.style.left = `${gear1NewLeftPosition}px`
+    gear1.style.top = `${gear1NewTopPosition}px`
+    
+    //GEAR 2
+    let gear2NewLeftPosition = gear2LeftPosition + window.scrollY;
+    gear2.style.left = `${gear2NewLeftPosition}px`
+
+    // GEAR 4
+    if(window.scrollY < 300) {
+      let gear4NewLeftPosition = gear4LeftPosition + (window.scrollY);
+      let gear4NewTopPosition = gear4TopPosition + (window.scrollY);
+      gear4.style.left = `${gear4NewLeftPosition}px`;
+      gear4.style.top = `${gear4NewTopPosition}px`;
+    }
+
+    // GEAR 5
+      let gear5NewLeftPosition = gear5LeftPosition + (window.scrollY);
+      let gear5NewTopPosition = gear5TopPosition - (window.scrollY);
+      gear5.style.left = `${gear5NewLeftPosition}px`;
+      gear5.style.top = `${gear5NewTopPosition}px`;
 
 
-window.addEventListener("scroll", () => {
+    // GEAR 8
+    if(window.scrollY < 290) {
+      let gear8NewLeftPosition = gear8LeftPosition - (window.scrollY);
+      let gear8NewTopPosition = gear8TopPosition + (window.scrollY);
+      gear8.style.left = `${gear8NewLeftPosition}px`;
+      gear8.style.top = `${gear8NewTopPosition}px`;
+    }
 
-  // GEAR 1
-  let gear1NewLeftPosition = gear1LeftPosition + window.scrollY;
-  let gear1NewTopPosition = gear1TopPosition - window.scrollY;
-  gear1.style.left = `${gear1NewLeftPosition}px`
-  gear1.style.top = `${gear1NewTopPosition}px`
+    // GEAR 9
+    if(window.scrollY < 300) {
+      let gear9NewLeftPosition = gear9LeftPosition - window.scrollY;
+      let gear9NewTopPosition = gear9TopPosition + window.scrollY;
+      gear9.style.left = `${gear9NewLeftPosition}px`;
+      gear9.style.top = `${gear9NewTopPosition}px`;
+    }
 
-  //GEAR 2
-  let gear2NewLeftPosition = gear2LeftPosition + window.scrollY;
-  gear2.style.left = `${gear2NewLeftPosition}px`
+    // GEAR 10
+    let gear10NewLeftPosition = gear10LeftPosition - window.scrollY;
+    let gear10NewTopPosition = gear10TopPosition - window.scrollY;
+    gear10.style.left = `${gear10NewLeftPosition}px`;
+    gear10.style.top = `${gear10NewTopPosition}px`;
 
-  // GEAR 4
-  if(window.scrollY < 200) {
-    let gear4NewLeftPosition = gear4LeftPosition + window.scrollY;
-    let gear4NewTopPosition = gear4TopPosition + window.scrollY;
-    gear4.style.left = `${gear4NewLeftPosition}px`;
-    gear4.style.top = `${gear4NewTopPosition}px`;
-  }
-
-  // GEAR 5
-    let gear5NewLeftPosition = gear5LeftPosition + window.scrollY;
-    let gear5NewTopPosition = gear5TopPosition - window.scrollY;
-    gear5.style.left = `${gear5NewLeftPosition}px`;
-    gear5.style.top = `${gear5NewTopPosition}px`;
-
-
-  // GEAR 8
-  let gear8NewLeftPosition = gear8LeftPosition - window.scrollY;
-  let gear8NewTopPosition = gear8TopPosition + window.scrollY;
-  gear8.style.left = `${gear8NewLeftPosition}px`;
-  gear8.style.top = `${gear8NewTopPosition}px`;
-
-  // GEAR 9
-  if(window.scrollY < 325) {
-    let gear9NewLeftPosition = gear9LeftPosition - window.scrollY;
-    let gear9NewTopPosition = gear9TopPosition + window.scrollY;
-    gear9.style.left = `${gear9NewLeftPosition}px`;
-    gear9.style.top = `${gear9NewTopPosition}px`;
-  }
-
-  // GEAR 10
-  let gear10NewLeftPosition = gear10LeftPosition - window.scrollY;
-  let gear10NewTopPosition = gear10TopPosition - window.scrollY;
-  gear10.style.left = `${gear10NewLeftPosition}px`;
-  gear10.style.top = `${gear10NewTopPosition}px`;
-
-  // GEAR 11
-  let gear11NewLeftPosition = gear11LeftPosition - window.scrollY;
-  let gear11NewTopPosition = gear11TopPosition - window.scrollY;
-  gear11.style.left = `${gear11NewLeftPosition}px`;
-  gear11.style.top = `${gear11NewTopPosition}px`;
+    // GEAR 11
+    let gear11NewLeftPosition = gear11LeftPosition - window.scrollY;
+    let gear11NewTopPosition = gear11TopPosition - window.scrollY;
+    gear11.style.left = `${gear11NewLeftPosition}px`;
+    gear11.style.top = `${gear11NewTopPosition}px`;
 
 
-});
+  });
 
 });
 
