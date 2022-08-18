@@ -1,0 +1,505 @@
+/*---------TOP SECTION ART STARTS----------*/
+
+.top-section {
+    position: relative;
+    height: 490px;
+    width: 100%;
+}
+
+.top-section-container {
+    position: relative;
+    display: flex;
+    top: -26px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 1250px;
+}
+
+
+.section1-top-art {
+    position: relative;
+    height: 590px;
+    text-align: center;
+    top: -329px;
+}
+
+.section1-img {
+    height: 100%;
+}
+
+.topart-gear1 {
+    position: absolute;
+    height: 165px;
+    width: 165px;
+    z-index: 99;
+    top: 171px;
+    left: 1228px;
+    text-align: center;
+    animation:spin_clock 20s linear infinite;
+}
+
+.topart-gear2 {
+    position: absolute;
+    height: 187px;
+    width: 187px;
+    z-index: 99;
+    top: 392px;
+    left: 1506px;
+    text-align: center;
+    animation:spin_counter 25s linear infinite;
+}
+
+.topart-gear3 {
+    position: absolute;
+    height: 145px;
+    width: 145px;
+    z-index: 99;
+    top: 429px;
+    left: 1353px;
+    text-align: center;
+    animation:spin_clock 30s linear infinite;
+}
+
+.topart-gear4 {
+    position: absolute;
+    height: 144px;
+    width: 144px;
+    z-index: 100;
+    top: 338px;
+    left: 1250px;
+    text-align: center;
+    animation:spin_counter 20s linear infinite;
+}
+
+.topart-gear5 {
+    position: absolute;
+    height: 85px;
+    width: 85px;
+    z-index: 98;
+    top: 355px;
+    left: 1456px;
+    text-align: center;
+    animation:spin_clock 20s linear infinite;
+}
+
+.topart-gear6 {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    z-index: 99;
+    top: 55px;
+    left: 900px;
+    text-align: center;
+    animation: spin_clock 20s linear infinite;
+}
+
+.topart-gear7 {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    z-index: 99;
+    top: 13px;
+    left: 952px;
+    text-align: center;
+    animation: spin_counter 20s linear infinite;
+}
+
+.topart-gear8 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 99;
+    top: 508px;
+    left: 519px;
+    text-align: center;
+    animation: spin_clock 20s linear infinite;
+}
+
+.topart-gear9 {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    z-index: 99;
+    top: 519px;
+    left: 566px;
+    text-align: center;
+    animation: spin_counter 25s linear infinite;
+}
+
+.topart-gear10 {
+    position: absolute;
+    height: 85px;
+    width: 85px;
+    z-index: 98;
+    top: 473px;
+    left: 212px;
+    text-align: center;
+    animation: spin_clock 25s linear infinite;
+}
+
+.topart-gear11 {
+    position: absolute;
+    height: 160px;
+    width: 54px;
+    z-index: 98;
+    top: 254px;
+    left: 503px;
+    text-align: center;
+}
+
+
+.topart-lightbulb {
+    position: absolute;
+    height: 112px;
+    width: 75px;
+    z-index: 98;
+    top: 343px;
+    left: 148px;
+    text-align: center;
+}
+
+
+.user-greeting {
+    position: absolute;
+    width: 428px;
+    top: 119px;
+    font-size: 23px !important;
+    background-color: #272822;
+    padding: 30px;
+    color: white !important;
+    height: 242px;
+}
+
+
+.topart_address-bar{
+    position: absolute;
+    z-index: 98;
+    top: 205px;
+    left: 192px;
+    text-align: center;
+}
+
+.topart_bug{
+    position: absolute;
+    z-index: 98;
+    top: 353px;
+    left: 1095px;
+    text-align: center;
+}
+
+.topart_GET{
+    position: absolute;
+    z-index: 98;
+    top: 121px;
+    left: 539px;
+    text-align: center;
+}
+
+.topart_green-lock-nut{
+    position: absolute;
+    z-index: 98;
+    top: 66px;
+    left: 701px;
+    text-align: center;
+}
+
+.topart_phone{
+    position: absolute;
+    z-index: 98;
+    top: 366px;
+    left: 1176px;
+    width: 65px;
+    text-align: center;
+}
+
+.topart_POST{
+    position: absolute;
+    z-index: 98;
+    top: 180px;
+    left: 1102px;
+    width: 105px;
+    text-align: center;
+}
+
+.topart_screw-driver{
+    position: absolute;
+    z-index: 98;
+    top: 136px;
+    left: 1100px;
+    width: 185px;
+    text-align: center;
+}
+
+.topart_sd-card{
+    position: absolute;
+    z-index: 98;
+    top: 427px;
+    left: 449px;
+    text-align: center;
+}
+
+.topart-connector{
+    position: absolute;
+    z-index: 98;
+    top: 129px;
+    width: 175px;
+    left: 450px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .user-location, .weather_phrase {
+        color: #ed236f;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .top-section {
+        height: 360px;
+        width: 100%;
+    }
+    .section1-top-art{
+        top: -282px;
+    }
+    
+    .top-section-container {
+        position: relative;
+        display: flex;
+        top: -22px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .section1-img {
+        position: relative;
+        height: 380px;
+    }
+    .topart-gear1 {
+        top: 107px;
+        left: 789px;
+        height: 110px;
+        width: 110px;
+    }
+    .topart-gear2 {
+        height: 140px;
+        width: 140px;
+        top: 243px;
+        left: 969px;
+    }
+
+    .topart-gear3 {
+        height: 95px;
+        width: 95px;
+        top: 278px;
+        left: 872px;
+    }
+
+    .topart-gear4 {
+        height: 95px;
+        width: 95px;
+        top: 218px;
+        left: 804px;
+    }
+
+    .topart-gear5 {
+        height: 55px;
+        width: 55px;
+        top: 227px;
+        left: 927px;
+    }
+
+    .topart-gear6 {
+        top: 12px;
+        left: 571px;
+    }
+
+    .topart-gear7 {
+        top: -48px;
+        left: 607px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .topart-gear8 {
+        top: 337px;
+        left: 298px;
+    }
+
+    .topart-gear9 {
+        top: 366px;
+        left: 341px;
+
+    }
+
+    .topart-gear10 {
+        top: 330px;
+        left: 400px;
+    }
+
+    .topart-gear11 {
+        top: 156px;
+        left: 322px;
+        height: 105px;
+        width: 36px;
+    }
+
+    .topart-lightbulb {
+        top: 209px;
+        left: 91px;
+        height: 90px;
+        width: 57px;
+    }
+
+    .user-greeting {
+        position: absolute;
+        width: 280px;
+        height: 200px;
+        top: 115px;
+        font-size: 17px !important;
+        background-color: #272822;
+        color: white !important;
+        padding: 15px 15px 0px 15px;
+    
+    }
+
+    .topart_address-bar {
+        position: absolute;
+        z-index: 98;
+        top: 126px;
+        left: 81px;
+        width: 240px;
+        text-align: center;
+    }
+
+    .topart_bug {
+        position: absolute;
+        z-index: 98;
+        top: 222px;
+        left: 707px;
+        width: 46px;
+        text-align: center;
+    }
+
+    .topart_GET {
+        position: absolute;
+        z-index: 98;
+        top: 79px;
+        left: 344px;
+        width: 65px;
+        text-align: center;
+    }
+
+    .topart_green-lock-nut{
+        position: absolute;
+        z-index: 98;
+        top: 18px;
+        left: 457px;
+        width: 22px;
+        text-align: center;
+    }
+
+    .topart_phone{
+        position: absolute;
+        z-index: 98;
+        top: 235px;
+        left: 759px;
+        width: 42px;
+        text-align: center;
+    }
+
+    .topart_POST{
+        position: absolute;
+        z-index: 98;
+        top: 108px;
+        left: 707px;
+        width: 78px;
+        text-align: center;
+    }
+
+    .topart_screw-driver{
+        position: absolute;
+        z-index: 98;
+        top: 76px;
+        left: 707px;
+        width: 137px;
+        text-align: center;
+    }
+
+    .topart_sd-card{
+        position: absolute;
+        z-index: 98;
+        top: 270px;
+        left: 311px;
+        width: 40px;
+        text-align: center;
+    }
+
+    .topart-connector{
+        position: absolute;
+        z-index: 98;
+        top: 87px;
+        width: 90px;
+        left: 311px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .topart-gear1 {
+        top: 333px;
+        left: 599px;
+        height: 110px;
+        width: 110px;
+    }
+    
+    .topart-gear2 {
+        height: 80px;
+        width: 80px;
+        top: 385px;
+        left: 697px;
+    }
+
+    .topart-gear3 {
+        height: 95px;
+        width: 95px;
+        top: 278px;
+        left: 872px;
+    }
+
+    .topart-gear4 {
+        display: none;
+    }
+
+    .topart-gear8 {
+        display: none;
+    }
+
+    .topart-gear9 {
+        top: 366px;
+        left: 341px;
+
+    }
+
+    .topart-gear10 {
+        top: 330px;
+        left: 400px;
+    }
+
+    .topart-gear11 {
+        display: none;
+    }
+
+    .topart-lightbulb {
+        top: 22px;
+        left: 701px;
+        height: 63px;
+        width: 43px;
+    }
+}
+
+/* -- TOP SECTION ART ENDS -- */

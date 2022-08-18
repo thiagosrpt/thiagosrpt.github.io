@@ -60,7 +60,41 @@ const topartLightbulb = document.querySelector('.topart-lightbulb')
 const topartLightbulbStyle = getComputedStyle(topartLightbulb);
 const topartLightbulbLeftPosition = parseInt(topartLightbulbStyle.left.replace('px',''));
 const topartLightbulbTopPosition = parseInt(topartLightbulbStyle.top.replace('px',''));
-const topartLightbulbRotation = parseInt(topartLightbulbStyle.transform.replace('deg',''));
+
+//topart_address-bar
+const topartAddressBar = document.querySelector('.topart_address-bar')
+const topartAddressBarStyle = getComputedStyle(topartAddressBar);
+const topartAddressBarLeftPosition = parseInt(topartAddressBarStyle.left.replace('px',''));
+const topartAddressBarTopPosition = parseInt(topartAddressBarStyle.top.replace('px',''));
+
+//topart_bug
+const topartBug = document.querySelector('.topart_bug')
+const topartBugStyle = getComputedStyle(topartBug);
+const topartBugLeftPosition = parseInt(topartBugStyle.left.replace('px',''));
+const topartBugTopPosition = parseInt(topartBugStyle.top.replace('px',''));
+
+//topart_GET
+const topartGET = document.querySelector('.topart_GET')
+const topartGETStyle = getComputedStyle(topartGET);
+const topartGETLeftPosition = parseInt(topartGETStyle.left.replace('px',''));
+const topartGETTopPosition = parseInt(topartGETStyle.top.replace('px',''));
+
+//topart_green-lock-nut
+
+//topart_phone
+const topartPhone = document.querySelector('.topart_phone')
+const topartPhoneStyle = getComputedStyle(topartPhone);
+const topartPhoneLeftPosition = parseInt(topartPhoneStyle.left.replace('px',''));
+const topartPhoneTopPosition = parseInt(topartPhoneStyle.top.replace('px',''));
+
+//topart_POST
+
+//topart_screw-driver
+const topartScrewDriver = document.querySelector('.topart_screw-driver')
+const topartScrewDriverStyle = getComputedStyle(topartScrewDriver);
+const topartScrewDriverLeftPosition = parseInt(topartScrewDriverStyle.left.replace('px',''));
+const topartScrewDriverTopPosition = parseInt(topartScrewDriverStyle.top.replace('px',''));
+
 
 
   window.addEventListener("scroll", () => {
@@ -75,20 +109,21 @@ const topartLightbulbRotation = parseInt(topartLightbulbStyle.transform.replace(
     gear2.style.left = `${gear2NewLeftPosition}px`
 
     //GEAR 3
-    if(window.scrollY < 300) {
+
       let gear3NewLeftPosition = gear3LeftPosition + (window.scrollY * 0.9);
       let gear3NewTopPosition = gear3TopPosition + (window.scrollY * 0.7);
       gear3.style.left = `${gear3NewLeftPosition}px`;
       gear3.style.top = `${gear3NewTopPosition}px`;
-    }
+
 
     // GEAR 4
-    if(window.scrollY < 300) {
+
       let gear4NewLeftPosition = gear4LeftPosition + (window.scrollY * 1.5);
       let gear4NewTopPosition = gear4TopPosition + (window.scrollY * 0.5);
       gear4.style.left = `${gear4NewLeftPosition}px`;
       gear4.style.top = `${gear4NewTopPosition}px`;
-    }
+      gear4.style.transform = `rotate(${window.scrollY}deg)`;
+
 
     // GEAR 5
       let gear5NewLeftPosition = gear5LeftPosition + (window.scrollY * 1.2);
@@ -98,20 +133,20 @@ const topartLightbulbRotation = parseInt(topartLightbulbStyle.transform.replace(
 
 
     // GEAR 8
-    if(window.scrollY < 290) {
+
       let gear8NewLeftPosition = gear8LeftPosition - (window.scrollY * 0.8);
       let gear8NewTopPosition = gear8TopPosition + (window.scrollY);
       gear8.style.left = `${gear8NewLeftPosition}px`;
       gear8.style.top = `${gear8NewTopPosition}px`;
-    }
+
 
     // GEAR 9
-    if(window.scrollY < 220) {
+
       let gear9NewLeftPosition = gear9LeftPosition - window.scrollY;
-      let gear9NewTopPosition = gear9TopPosition + (window.scrollY * 2);
+      let gear9NewTopPosition = gear9TopPosition + (window.scrollY * 0.3);
       gear9.style.left = `${gear9NewLeftPosition}px`;
       gear9.style.top = `${gear9NewTopPosition}px`;
-    }
+
 
     // GEAR 10
     let gear10NewLeftPosition = gear10LeftPosition - window.scrollY;
@@ -132,6 +167,42 @@ const topartLightbulbRotation = parseInt(topartLightbulbStyle.transform.replace(
     topartLightbulb.style.left = `${topartLightbulbNewLeftPosition}px`;
     topartLightbulb.style.top = `${topartLightbulbNewTopPosition}px`;
     topartLightbulb.style.transform = `rotate(${window.scrollY}deg)`;
+
+    //topartAddressBar
+    let topartAddressBarNewLeftPosition = topartAddressBarLeftPosition - (window.scrollY * 1.5);
+    let topartAddressBarNewTopPosition = topartAddressBarTopPosition + (window.scrollY * 1.3);
+    topartAddressBar.style.left = `${topartAddressBarNewLeftPosition}px`;
+    topartAddressBar.style.top = `${topartAddressBarNewTopPosition}px`;
+    topartAddressBar.style.transform = `rotate(${window.scrollY}deg)`;
+
+    //topart_bug
+    let topartBugNewLeftPosition = topartBugLeftPosition + (window.scrollY * 1.5);
+    let topartBugNewTopPosition = topartBugTopPosition + (window.scrollY * 1.3);
+    topartBug.style.left = `${topartBugNewLeftPosition}px`;
+    topartBug.style.top = `${topartBugNewTopPosition}px`;
+    topartBug.style.transform = `rotate(${window.scrollY}deg)`;
+
+    //topartGET
+    let topartGETNewLeftPosition = topartGETLeftPosition - (window.scrollY * 1.5);
+    let topartGETNewTopPosition = topartGETTopPosition - (window.scrollY * 1.3);
+    topartGET.style.left = `${topartGETNewLeftPosition}px`;
+    topartGET.style.top = `${topartGETNewTopPosition}px`;
+    topartGET.style.transform = `rotate(${window.scrollY}deg)`;
+
+
+    //topartPhone
+    let topartPhoneNewLeftPosition = topartPhoneLeftPosition - (window.scrollY * 1.5);
+    let topartPhoneNewTopPosition = topartPhoneTopPosition - (window.scrollY * 1.3);
+    topartPhone.style.left = `${topartPhoneNewLeftPosition}px`;
+    topartPhone.style.top = `${topartPhoneNewTopPosition}px`;
+    topartPhone.style.transform = `rotate(${window.scrollY}deg)`;
+
+    //topartScrewDriver
+    let topartScrewDriverNewLeftPosition = topartScrewDriverLeftPosition + (window.scrollY * 1);
+    let topartScrewDriverNewTopPosition = topartScrewDriverTopPosition - (window.scrollY * 1);
+    topartScrewDriver.style.left = `${topartScrewDriverNewLeftPosition}px`;
+    topartScrewDriver.style.top = `${topartScrewDriverNewTopPosition}px`;
+    topartScrewDriver.style.transform = `rotate(${window.scrollY}deg)`;
 
 
   });
