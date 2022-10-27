@@ -32,6 +32,11 @@ a:active {
     color: #ed236f !important;
 }
 
+.btn-dark {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
 
 .card {
     border: solid;
