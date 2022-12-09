@@ -134,7 +134,7 @@ const topartScrewDriverTopPosition = parseInt(topartScrewDriverStyle.top.replace
 
     // GEAR 8
 
-      let gear8NewLeftPosition = gear8LeftPosition - (window.scrollY * 0.8);
+      let gear8NewLeftPosition = gear8LeftPosition - (window.scrollY * 0.95);
       let gear8NewTopPosition = gear8TopPosition + (window.scrollY);
       gear8.style.left = `${gear8NewLeftPosition}px`;
       gear8.style.top = `${gear8NewTopPosition}px`;
@@ -180,7 +180,7 @@ const topartScrewDriverTopPosition = parseInt(topartScrewDriverStyle.top.replace
     let topartBugNewTopPosition = topartBugTopPosition + (window.scrollY * 1.3);
     topartBug.style.left = `${topartBugNewLeftPosition}px`;
     topartBug.style.top = `${topartBugNewTopPosition}px`;
-    topartBug.style.transform = `rotate(${window.scrollY}deg)`;
+    topartBug.style.transform = `rotate(-${window.scrollY}deg)`;
 
     //topartGET
     let topartGETNewLeftPosition = topartGETLeftPosition - (window.scrollY * 1.5);
