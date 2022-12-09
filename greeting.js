@@ -26,11 +26,11 @@ async function getCoordinates(ip) {
       })
       .then((data) => {
         console.log(data);
-        const { lat } = data;
-        const { lon } = data;
+        const { latitude } = data;
+        const { longitude } = data;
         const { city } = data;
-        const { regionName} = data;
-        getWeather(lat, lon, city, regionName);
+        const { region_name } = data;
+        getWeather(latitude, longitude, city, region_name);
       });
   }
 
