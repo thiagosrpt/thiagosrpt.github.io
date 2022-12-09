@@ -250,6 +250,16 @@
     text-align: center;
 }
 
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-text {
+    font-size: 16px;
+}
+
 
 
 @media (max-width: 1000px) {
