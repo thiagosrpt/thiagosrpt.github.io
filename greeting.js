@@ -19,7 +19,7 @@ window.addEventListener("load", function() {
     });
 
 async function getCoordinates(ip) {
-    const location = await `http://ip-api.com/json/${ip}`;
+    const location = await `http://api.ipstack.com/${ip}?access_key=081a027c96ae3e8809014bb252a8d5b3`;
     fetch(location)
       .then((response) => {
         return response.json();
