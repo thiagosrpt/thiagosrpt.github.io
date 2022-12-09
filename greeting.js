@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
 
 
   const proxy = "https://cros-anywhere.herokuapp.com/";
-  let ip_response = `${[[proxy]]}https://api.ipify.org?format=json`;
+  let ip_response = `https://api.ipify.org?format=json`;
 
   fetch(ip_response)
     .then((response) => {
@@ -19,7 +19,7 @@ window.addEventListener("load", function() {
     });
 
 async function getCoordinates(ip) {
-    const location = await `${[[proxy]]}http://ip-api.com/json/${ip}`;
+    const location = await `http://ip-api.com/json/${ip}`;
     fetch(location)
       .then((response) => {
         return response.json();
@@ -35,7 +35,7 @@ async function getCoordinates(ip) {
   }
 
   async function getWeather(lat, log, city, regionName) {
-    const api = await `${[[proxy]]}https://api.weatherapi.com/v1/current.json?key=c2ef9cc9ff124396863165707220705&q=${lat},${log}&aqi=no`; // REAL REQUEST
+    const api = await `https://api.weatherapi.com/v1/current.json?key=c2ef9cc9ff124396863165707220705&q=${lat},${log}&aqi=no`; // REAL REQUEST
 
     fetch(api)
       .then((response) => {
