@@ -33,10 +33,9 @@ a:active {
 }
 
 .btn-dark {
-    margin-left: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
-
-
 
 
 .card {
@@ -409,25 +408,3 @@ section {
     50% {top: 86%; }
     100% { top: 87%;}
 }
-
-
-.buttons-cards{
-    filter: brightness(600%);
-    height: 25px;
-    width: auto;
-    padding: 0;
-}
-.buttons-cards:hover{
-    filter: brightness(1000%);
-    height: 25px;
-    width: auto;
-    padding: 0;
-}
-
-.git-live-button{
-    display: flex;
-    padding: 0px 0px 10px 0px;
-    justify-content: flex-start;
-}
-
-
